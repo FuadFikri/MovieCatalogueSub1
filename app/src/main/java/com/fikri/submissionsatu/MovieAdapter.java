@@ -60,7 +60,7 @@ public class MovieAdapter extends BaseAdapter {
         }
         void bind(Movie hero) {
             txtTitle.setText(hero.getTitle());
-            txtYear.setText(hero.getDescription());
+            txtYear.setText(hero.getYear());
             imgPoster.setImageResource(hero.getPoster());
         }
     }
