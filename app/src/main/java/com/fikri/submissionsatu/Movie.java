@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Movie implements Parcelable {
     private String title;
     private String description;
-    private int year;
+    private String year;
     private int poster;
 
     public String getTitle() {
@@ -25,11 +25,11 @@ public class Movie implements Parcelable {
         this.description = description;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -50,7 +50,7 @@ public class Movie implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.title);
         dest.writeString(this.description);
-        dest.writeInt(this.year);
+        dest.writeString(this.year);
         dest.writeInt(this.poster);
     }
 
@@ -60,7 +60,7 @@ public class Movie implements Parcelable {
     protected Movie(Parcel in) {
         this.title = in.readString();
         this.description = in.readString();
-        this.year = in.readInt();
+        this.year = in.readString();
         this.poster = in.readInt();
     }
 
