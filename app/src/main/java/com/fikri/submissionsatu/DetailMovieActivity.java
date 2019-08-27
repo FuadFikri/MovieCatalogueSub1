@@ -6,15 +6,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailMovieActivity extends AppCompatActivity {
-    String title,description,year;
-    int poster;
     public static final String EXTRA_MOVIE = "extra_movie";
-    TextView tvTitle, tvDesc, tvYear;
-    ImageView imgPoster;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_movie);
+        String title,description,year;
+        int poster;
+        TextView tvTitle, tvDesc, tvYear;
+        ImageView imgPoster;
+
         tvTitle = findViewById(R.id.text_detail_title);
         tvDesc= findViewById(R.id.text_detail_desc);
         tvYear= findViewById(R.id.text_detail_year);
